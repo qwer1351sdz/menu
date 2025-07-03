@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sq">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title> Qr Menu</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #qrcode {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Menu e Restaurantit</h1>
+    <p>skano QR Kodin per te pare menun tone</p>
+
+    <div id="qrcode"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        const menunURL = "menuja.pdf";
+
+        new QRcode (document.getElementById("qecode"), {
+            text: menunURL,
+            width: 200,
+            height: 200
+        });
+    </script>
+</body>
+</html>
