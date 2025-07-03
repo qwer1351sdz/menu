@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="sq">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
-    <title> Qr Menu</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        #qrcode {
-            margin-top: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu e Restorantit</title>
+<style>
+body {
+font-family: sans-serif;
+text-align: center;
+padding: 50px;
+}
+#qrcode {
+margin-top: 20px;
+}
+</style>
 </head>
-
 <body>
-    <h1>Menu e Restaurantit</h1>
-    <p>skano QR Kodin per te pare menun tone</p>
 
-    <div id="qrcode"></div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<h1>Menu e Restorantit</h1>
+<p>Skano QR Kodin për të parë menunë tonë</p>
 
-    <script>
-        const menunURL = "https://qwer1351sdz.github.io/menu/menuja.pdf";
+<div id="qrcode"></div>
 
-        new QRCode (document.getElementById("qecode"), {
-            text: menunURL,
-            width: 200,
-            height: 200
-        });
-    </script>
+<!-- Biblioteka e QR Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<!-- JavaScript pasi DOM është ngarkuar -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const menuURL = "https://qwer1351sdz.github.io/menu/menuja.pdf";
+new QRCode(document.getElementById("qrcode"), {
+text: menuURL,
+width: 200,
+height: 200
+});
+});
+</script>
+
 </body>
 </html>
